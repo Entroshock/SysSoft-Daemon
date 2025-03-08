@@ -1,0 +1,37 @@
+[2025-03-08 18:01:04] INFO: IPC message queue created successfully
+[2025-03-08 18:01:04] INFO: Daemon started successfully
+[2025-03-08 18:03:59] INFO: Manual backup/transfer requested
+[2025-03-08 18:03:59] INFO: Locking directories for backup/transfer
+[2025-03-08 18:03:59] INFO: Directories locked successfully
+[2025-03-08 18:03:59] INFO: Starting file transfer operation
+[2025-03-08 18:03:59] INFO: File transfer operation completed (0 files processed)
+[2025-03-08 18:03:59] INFO: Starting backup operation
+[2025-03-08 18:03:59] INFO: Unlocking directories after backup/transfer
+[2025-03-08 18:03:59] INFO: Directories unlocked successfully
+[2025-03-08 18:21:21] INFO: Manual backup/transfer requested
+[2025-03-08 18:21:21] INFO: Locking directories for backup/transfer
+[2025-03-08 18:21:21] INFO: Directories locked successfully
+[2025-03-08 18:21:21] INFO: Starting file transfer operation
+[2025-03-08 18:21:21] INFO: File transfer operation completed (0 files processed)
+[2025-03-08 18:21:21] INFO: Starting backup operation
+[2025-03-08 18:21:21] INFO: Unlocking directories after backup/transfer
+[2025-03-08 18:21:21] INFO: Directories unlocked successfully
+[2025-03-08 18:22:22] INFO: Manual backup/transfer requested
+[2025-03-08 18:22:22] INFO: Locking directories for backup/transfer
+[2025-03-08 18:22:22] INFO: Directories locked successfully
+[2025-03-08 18:22:22] INFO: Starting file transfer operation
+[2025-03-08 18:22:22] INFO: File transfer operation completed (0 files processed)
+[2025-03-08 18:22:22] INFO: Starting backup operation
+[2025-03-08 18:22:22] INFO: Unlocking directories after backup/transfer
+[2025-03-08 18:22:22] INFO: Directories unlocked successfully
+[2025-03-08 21:25:36] INFO: Manual backup/transfer requested
+[2025-03-08 21:25:36] INFO: Locking directories for backup/transfer
+[2025-03-08 21:25:36] INFO: Directories locked successfully
+[2025-03-08 21:25:36] INFO: Starting file transfer operation
+[2025-03-08 21:25:36] INFO: File transfer operation completed (0 files processed)
+[2025-03-08 21:25:36] INFO: Starting backup operation
+[2025-03-08 21:25:36] INFO: Unlocking directories after backup/transfer
+[2025-03-08 21:25:36] INFO: Directories unlocked successfully
+[2025-03-08 23:02:28] INFO: Received unhandled signal: 1
+[2025-03-08 23:02:28] INFO: Received SIGTERM, shutting down...
+[2025-03-08 23:02:28] INFO: Daemon shutting down

@@ -22,7 +22,7 @@ $(CLIENT_BIN): $(CLIENT_OBJ)
 	$(CC) $(LDFLAGS) -o $@ $^
 
 %.o: %.c config.h
-	$(CC) $(CFLAGS) -c -o $@ $
+	$(CC) $(CFLAGS) -c -o $@ $<
 
 clean:
 	rm -f $(DAEMON_OBJ) $(CLIENT_OBJ) $(DAEMON_BIN) $(CLIENT_BIN)
