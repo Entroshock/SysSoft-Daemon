@@ -16,8 +16,9 @@ struct msg_buffer {
 };
 
 // Function to get daemon PID
+// Updated get_daemon_pid function for client.c
 pid_t get_daemon_pid() {
-    FILE *fp = popen("pgrep manufacturing_daemon", "r");
+    FILE *fp = popen("pgrep -f 'manufacturing_daemon$'", "r");
     char buf[32];
     pid_t pid = -1;
     

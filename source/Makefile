@@ -43,4 +43,5 @@ install:
 	cp $(CLIENT_BIN) /usr/bin/
 	cp manufacturing_daemon.init /etc/init.d/manufacturing_daemon
 	chmod 755 /etc/init.d/manufacturing_daemon
+	sudo dos2unix /etc/init.d/manufacturing_daemon
 	update-rc.d manufacturing_daemon defaults

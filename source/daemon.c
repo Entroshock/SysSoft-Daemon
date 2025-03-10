@@ -13,6 +13,7 @@
 #include <pwd.h>
 #include <sys/ipc.h>
 #include <sys/msg.h>
+#include <sys/wait.h> 
 #include "config.h"
 #include <errno.h>
 #include <stdarg.h>
@@ -44,7 +45,7 @@ void log_error(const char *format, ...);
 void log_info(const char *format, ...);   
 void process_ipc_messages();              
 void check_missing_reports();             
-
+int execute_command(char *command, char *args[]); // Added
 
 int main() {
     daemonize();
@@ -67,16 +68,7 @@ int main() {
         check_files();
         
         // Check for IPC messages to trigger manual operations
-        struct msg_buffer message;
-        if (msgrcv(msgqid, &message, sizeof(message.msg_text), 1, IPC_NOWAIT) != -1) {
-            if (strcmp(message.msg_text, "BACKUP_TRANSFER") == 0) {
-                log_info("Manual backup/transfer requested");
-                lock_directories();
-                transfer_files();
-                backup_files();
-                unlock_directories();
-            }
-        }
+        process_ipc_messages();
         
         sleep(60); // Check every minute
     }
@@ -84,6 +76,74 @@ int main() {
     log_info("Daemon shutting down");
     closelog();
     return 0;
+}
+
+// Execute command using fork and exec
+int execute_command(char *command, char *args[]) {
+    pid_t pid;
+    int status;
+    
+    // Debug output
+    char cmd_str[256] = "";
+    for (int i = 0; args[i] != NULL; i++) {
+        strcat(cmd_str, args[i]);
+        strcat(cmd_str, " ");
+    }
+    log_info("Executing command: %s", cmd_str);
+    
+    // Temporarily change SIGCHLD handling
+    signal(SIGCHLD, SIG_DFL);
+    
+    pid = fork();
+    
+    if (pid < 0) {
+        // Fork failed
+        log_error("Fork failed: %s", strerror(errno));
+        signal(SIGCHLD, SIG_IGN); // Reset signal handling
+        return -1;
+    } 
+    else if (pid == 0) {
+        // Child process
+        execvp(command, args);
+        
+        // If we get here, exec failed
+        log_error("Exec failed for command %s: %s", command, strerror(errno));
+        exit(EXIT_FAILURE);
+    } 
+    else {
+        // Parent process
+        if (waitpid(pid, &status, 0) == -1) {
+            if (errno == ECHILD) {
+                // Child already reaped
+                log_info("Child process already reaped");
+                signal(SIGCHLD, SIG_IGN); // Reset signal handling
+                return 0; // Assume success
+            } else {
+                log_error("Wait failed: %s", strerror(errno));
+                signal(SIGCHLD, SIG_IGN); // Reset signal handling
+                return -1;
+            }
+        }
+        
+        // Reset signal handling
+        signal(SIGCHLD, SIG_IGN);
+        
+        if (WIFEXITED(status)) {
+            // Command executed successfully
+            int exit_status = WEXITSTATUS(status);
+            if (exit_status != 0) {
+                log_error("Command %s exited with non-zero status: %d", command, exit_status);
+                return exit_status;
+            }
+            log_info("Command executed successfully");
+            return 0;
+        } else if (WIFSIGNALED(status)) {
+            log_error("Command %s terminated by signal: %d", command, WTERMSIG(status));
+            return -1;
+        }
+    }
+    
+    return -1;
 }
 
 // Turn the process into a daemon
@@ -292,8 +352,6 @@ void check_files() {
 void transfer_files() {
     DIR *dir;
     struct dirent *entry;
-    char *cmd; // Make this dynamic to handle very long paths
-    int status;
     int file_count = 0;
     
     log_info("Starting file transfer operation");
@@ -308,42 +366,20 @@ void transfer_files() {
     while ((entry = readdir(dir)) != NULL) {
         if (entry->d_type == DT_REG) { // Regular file
             if (strstr(entry->d_name, ".xml") != NULL) {
-                char src_path[PATH_MAX];  // Use PATH_MAX for maximum path length
+                char src_path[PATH_MAX];
                 char dest_path[PATH_MAX];
                 
                 snprintf(src_path, sizeof(src_path), "%s/%s", UPLOAD_DIR, entry->d_name);
                 snprintf(dest_path, sizeof(dest_path), "%s/%s", REPORT_DIR, entry->d_name);
                 
-                // Calculate required buffer size and allocate appropriately
-                size_t cmd_size = strlen("cp ") + strlen(src_path) + strlen(" ") + 
-                                 strlen(dest_path) + 1; // +1 for null terminator
-                cmd = malloc(cmd_size);
-                
-                if (cmd == NULL) {
-                    log_error("Memory allocation failed for command buffer");
-                    continue;
-                }
-                
-                // Use the right size for the command buffer
-                snprintf(cmd, cmd_size, "cp %s %s", src_path, dest_path);
-                status = system(cmd);
+                // Use exec to copy file
+                char *cp_args[] = {"cp", src_path, dest_path, NULL};
+                int status = execute_command("cp", cp_args);
                 
                 if (status == 0) {
                     // Success, now remove from upload dir
-                    free(cmd); // Free the first command buffer
-                    
-                    // Allocate for the rm command
-                    cmd_size = strlen("rm ") + strlen(src_path) + 1;
-                    cmd = malloc(cmd_size);
-                    
-                    if (cmd == NULL) {
-                        log_error("Memory allocation failed for command buffer");
-                        continue;
-                    }
-                    
-                    snprintf(cmd, cmd_size, "rm %s", src_path);
-                    status = system(cmd);
-                    free(cmd);
+                    char *rm_args[] = {"rm", src_path, NULL};
+                    status = execute_command("rm", rm_args);
                     
                     if (status != 0) {
                         log_error("Failed to remove source file after transfer");
@@ -351,7 +387,6 @@ void transfer_files() {
                         file_count++;
                     }
                 } else {
-                    free(cmd);
                     log_error("Failed to transfer file");
                 }
             }
@@ -371,11 +406,10 @@ void transfer_files() {
 
 // Backup reporting directory
 void backup_files() {
-    char cmd[2048];
-    int status;
     time_t now;
     struct tm *timeinfo;
     char timestamp[20];
+    char backup_path[1024];
     
     time(&now);
     timeinfo = localtime(&now);
@@ -384,13 +418,33 @@ void backup_files() {
     log_info("Starting backup operation");
     
     // Create backup directory with timestamp
-    char backup_path[1024];
     snprintf(backup_path, sizeof(backup_path), "%s/backup-%s", BACKUP_DIR, timestamp);
-    mkdir(backup_path, 0755);
     
-    // Use tar to create backup
-    snprintf(cmd, sizeof(cmd), "tar -czf %s/backup.tar.gz -C %s .", backup_path, REPORT_DIR);
-    status = system(cmd);
+    // Create directory using exec
+    char *mkdir_args[] = {"mkdir", "-p", backup_path, NULL};
+    int status = execute_command("mkdir", mkdir_args);
+    
+    if (status != 0) {
+        log_error("Failed to create backup directory");
+        return;
+    }
+    
+    // Create backup file path - ensure adequate buffer size
+    char backup_file[PATH_MAX]; // Use PATH_MAX for maximum path length
+    int ret = snprintf(backup_file, sizeof(backup_file), "%s/backup.tar.gz", backup_path);
+    
+    // Check for truncation or error
+    if (ret < 0) {
+        log_error("Error formatting backup path");
+        return;
+    } else if ((size_t)ret >= sizeof(backup_file)) {
+        log_error("Backup path too long, truncation occurred");
+        return;
+    }
+    
+    // Use tar with exec to create backup
+    char *tar_args[] = {"tar", "-czf", backup_file, "-C", REPORT_DIR, ".", NULL};
+    status = execute_command("tar", tar_args);
     
     if (status != 0) {
         log_error("Backup operation failed");

@@ -35,3 +35,314 @@
 [2025-03-08 23:02:28] INFO: Received unhandled signal: 1
 [2025-03-08 23:02:28] INFO: Received SIGTERM, shutting down...
 [2025-03-08 23:02:28] INFO: Daemon shutting down
+[2025-03-09 13:31:50] INFO: IPC message queue created successfully
+[2025-03-09 13:31:50] INFO: Daemon started successfully
+[2025-03-09 13:32:20] INFO: IPC message queue created successfully
+[2025-03-09 13:32:20] INFO: Daemon started successfully
+[2025-03-09 13:33:20] INFO: IPC message queue created successfully
+[2025-03-09 13:33:20] INFO: Daemon started successfully
+[2025-03-09 14:09:20] INFO: Received SIGTERM, shutting down...
+[2025-03-09 14:09:20] INFO: Daemon shutting down
+[2025-03-09 14:14:23] INFO: IPC message queue created successfully
+[2025-03-09 14:14:23] INFO: Daemon started successfully
+[2025-03-09 14:43:53] INFO: Received SIGUSR1, triggering backup/transfer...
+[2025-03-09 14:43:53] INFO: Locking directories for backup/transfer
+[2025-03-09 14:43:53] INFO: Directories locked successfully
+[2025-03-09 14:43:53] INFO: Starting file transfer operation
+[2025-03-09 14:43:53] INFO: File transfer operation completed (0 files processed)
+[2025-03-09 14:43:53] INFO: Starting backup operation
+[2025-03-09 14:43:53] INFO: Unlocking directories after backup/transfer
+[2025-03-09 14:43:53] INFO: Directories unlocked successfully
+[2025-03-09 14:47:20] INFO: Received SIGUSR1, triggering backup/transfer...
+[2025-03-09 14:47:20] INFO: Locking directories for backup/transfer
+[2025-03-09 14:47:20] INFO: Directories locked successfully
+[2025-03-09 14:47:20] INFO: Starting file transfer operation
+[2025-03-09 14:47:20] INFO: File transfer operation completed (0 files processed)
+[2025-03-09 14:47:20] INFO: Starting backup operation
+[2025-03-09 14:47:20] INFO: Unlocking directories after backup/transfer
+[2025-03-09 14:47:20] INFO: Directories unlocked successfully
+[2025-03-09 14:50:44] INFO: Received SIGTERM, shutting down...
+[2025-03-09 14:50:44] INFO: Daemon shutting down
+[2025-03-09 14:51:56] INFO: IPC message queue created successfully
+[2025-03-09 14:51:56] INFO: Daemon started successfully
+[2025-03-09 14:52:41] INFO: Received SIGUSR1, triggering backup/transfer...
+[2025-03-09 14:52:41] INFO: Locking directories for backup/transfer
+[2025-03-09 14:52:41] INFO: Directories locked successfully
+[2025-03-09 14:52:41] INFO: Starting file transfer operation
+[2025-03-09 14:52:41] INFO: Executing command: cp /media/sf_CA1/manufacturing/upload/Distribution_2025-03-08.xml /media/sf_CA1/manufacturing/report/Distribution_2025-03-08.xml 
+[2025-03-09 14:52:41] INFO: Command executed successfully
+[2025-03-09 14:52:41] INFO: Executing command: rm /media/sf_CA1/manufacturing/upload/Distribution_2025-03-08.xml 
+[2025-03-09 14:52:41] INFO: Command executed successfully
+[2025-03-09 14:52:41] INFO: Executing command: cp /media/sf_CA1/manufacturing/upload/Distribution_2025-03-09.xml /media/sf_CA1/manufacturing/report/Distribution_2025-03-09.xml 
+[2025-03-09 14:52:41] INFO: Command executed successfully
+[2025-03-09 14:52:41] INFO: Executing command: rm /media/sf_CA1/manufacturing/upload/Distribution_2025-03-09.xml 
+[2025-03-09 14:52:41] INFO: Command executed successfully
+[2025-03-09 14:52:41] INFO: Executing command: cp /media/sf_CA1/manufacturing/upload/Manufacturing_2025-03-08.xml /media/sf_CA1/manufacturing/report/Manufacturing_2025-03-08.xml 
+[2025-03-09 14:52:41] INFO: Command executed successfully
+[2025-03-09 14:52:41] INFO: Executing command: rm /media/sf_CA1/manufacturing/upload/Manufacturing_2025-03-08.xml 
+[2025-03-09 14:52:41] INFO: Command executed successfully
+[2025-03-09 14:52:41] INFO: Executing command: cp /media/sf_CA1/manufacturing/upload/Manufacturing_2025-03-09.xml /media/sf_CA1/manufacturing/report/Manufacturing_2025-03-09.xml 
+[2025-03-09 14:52:41] INFO: Command executed successfully
+[2025-03-09 14:52:41] INFO: Executing command: rm /media/sf_CA1/manufacturing/upload/Manufacturing_2025-03-09.xml 
+[2025-03-09 14:52:41] INFO: Command executed successfully
+[2025-03-09 14:52:41] INFO: Executing command: cp /media/sf_CA1/manufacturing/upload/Sales_2025-03-09.xml /media/sf_CA1/manufacturing/report/Sales_2025-03-09.xml 
+[2025-03-09 14:52:41] INFO: Command executed successfully
+[2025-03-09 14:52:41] INFO: Executing command: rm /media/sf_CA1/manufacturing/upload/Sales_2025-03-09.xml 
+[2025-03-09 14:52:41] INFO: Command executed successfully
+[2025-03-09 14:52:41] INFO: Executing command: cp /media/sf_CA1/manufacturing/upload/Warehouse_2025-03-08.xml /media/sf_CA1/manufacturing/report/Warehouse_2025-03-08.xml 
+[2025-03-09 14:52:41] INFO: Command executed successfully
+[2025-03-09 14:52:41] INFO: Executing command: rm /media/sf_CA1/manufacturing/upload/Warehouse_2025-03-08.xml 
+[2025-03-09 14:52:41] INFO: Command executed successfully
+[2025-03-09 14:52:41] INFO: Executing command: cp /media/sf_CA1/manufacturing/upload/Warehouse_2025-03-09.xml /media/sf_CA1/manufacturing/report/Warehouse_2025-03-09.xml 
+[2025-03-09 14:52:41] INFO: Command executed successfully
+[2025-03-09 14:52:41] INFO: Executing command: rm /media/sf_CA1/manufacturing/upload/Warehouse_2025-03-09.xml 
+[2025-03-09 14:52:41] INFO: Command executed successfully
+[2025-03-09 14:52:41] INFO: File transfer operation completed (7 files processed)
+[2025-03-09 14:52:41] INFO: Starting backup operation
+[2025-03-09 14:52:41] INFO: Executing command: mkdir -p /media/sf_CA1/manufacturing/backup/backup-20250309-145241 
+[2025-03-09 14:52:41] INFO: Command executed successfully
+[2025-03-09 14:52:41] INFO: Executing command: tar -czf /media/sf_CA1/manufacturing/backup/backup-20250309-145241/backup.tar.gz -C /media/sf_CA1/manufacturing/report . 
+[2025-03-09 14:52:41] INFO: Command executed successfully
+[2025-03-09 14:52:41] INFO: Backup operation completed successfully
+[2025-03-09 14:52:41] INFO: Unlocking directories after backup/transfer
+[2025-03-09 14:52:41] INFO: Directories unlocked successfully
+[2025-03-09 16:02:16] INFO: Received SIGTERM, shutting down...
+[2025-03-09 16:02:16] INFO: Daemon shutting down
+[2025-03-09 16:13:29] INFO: IPC message queue created successfully
+[2025-03-09 16:13:29] INFO: Daemon started successfully
+[2025-03-09 16:14:14] INFO: IPC message queue created successfully
+[2025-03-09 16:14:14] INFO: Daemon started successfully
+[2025-03-09 16:16:17] INFO: Received SIGTERM, shutting down...
+[2025-03-09 16:16:17] INFO: Daemon shutting down
+[2025-03-09 16:16:23] INFO: Received SIGTERM, shutting down...
+[2025-03-09 16:16:23] INFO: Daemon shutting down
+[2025-03-09 16:17:00] INFO: IPC message queue created successfully
+[2025-03-09 16:17:00] INFO: Daemon started successfully
+[2025-03-09 16:36:12] INFO: IPC message queue created successfully
+[2025-03-09 16:36:12] INFO: Daemon started successfully
+[2025-03-09 16:38:22] INFO: Received SIGTERM, shutting down...
+[2025-03-09 16:38:22] INFO: Daemon shutting down
+[2025-03-09 16:45:08] INFO: IPC message queue created successfully
+[2025-03-09 16:45:08] INFO: Daemon started successfully
+[2025-03-09 16:51:22] INFO: Received SIGTERM, shutting down...
+[2025-03-09 16:51:22] INFO: Daemon shutting down
+[2025-03-09 16:52:09] INFO: IPC message queue created successfully
+[2025-03-09 16:52:09] INFO: Daemon started successfully
+[2025-03-09 16:53:11] INFO: Received IPC message: BACKUP_TRANSFER
+[2025-03-09 16:53:11] INFO: Manual backup/transfer requested via IPC
+[2025-03-09 16:53:11] INFO: Locking directories for backup/transfer
+[2025-03-09 16:53:11] INFO: Directories locked successfully
+[2025-03-09 16:53:11] INFO: Starting file transfer operation
+[2025-03-09 16:53:11] INFO: Executing command: cp /media/sf_CA1/manufacturing/upload/Warehouse2025-03-09.xml /media/sf_CA1/manufacturing/report/Warehouse2025-03-09.xml 
+[2025-03-09 16:53:11] INFO: Command executed successfully
+[2025-03-09 16:53:11] INFO: Executing command: rm /media/sf_CA1/manufacturing/upload/Warehouse2025-03-09.xml 
+[2025-03-09 16:53:11] INFO: Command executed successfully
+[2025-03-09 16:53:11] INFO: Executing command: cp /media/sf_CA1/manufacturing/upload/Warehouse_2025-03-09.xml /media/sf_CA1/manufacturing/report/Warehouse_2025-03-09.xml 
+[2025-03-09 16:53:11] INFO: Command executed successfully
+[2025-03-09 16:53:11] INFO: Executing command: rm /media/sf_CA1/manufacturing/upload/Warehouse_2025-03-09.xml 
+[2025-03-09 16:53:11] INFO: Command executed successfully
+[2025-03-09 16:53:11] INFO: File transfer operation completed (2 files processed)
+[2025-03-09 16:53:11] INFO: Starting backup operation
+[2025-03-09 16:53:11] INFO: Executing command: mkdir -p /media/sf_CA1/manufacturing/backup/backup-20250309-165311 
+[2025-03-09 16:53:11] INFO: Command executed successfully
+[2025-03-09 16:53:11] INFO: Executing command: tar -czf /media/sf_CA1/manufacturing/backup/backup-20250309-165311/backup.tar.gz -C /media/sf_CA1/manufacturing/report . 
+[2025-03-09 16:53:11] INFO: Command executed successfully
+[2025-03-09 16:53:11] INFO: Backup operation completed successfully
+[2025-03-09 16:53:11] INFO: Unlocking directories after backup/transfer
+[2025-03-09 16:53:11] INFO: Directories unlocked successfully
+[2025-03-09 16:54:37] INFO: Received IPC message: BACKUP_TRANSFER
+[2025-03-09 16:54:37] INFO: Manual backup/transfer requested via IPC
+[2025-03-09 16:54:37] INFO: Locking directories for backup/transfer
+[2025-03-09 16:54:37] INFO: Directories locked successfully
+[2025-03-09 16:54:37] INFO: Starting file transfer operation
+[2025-03-09 16:54:37] INFO: File transfer operation completed (0 files processed)
+[2025-03-09 16:54:37] INFO: Starting backup operation
+[2025-03-09 16:54:37] INFO: Executing command: mkdir -p /media/sf_CA1/manufacturing/backup/backup-20250309-165437 
+[2025-03-09 16:54:37] INFO: Command executed successfully
+[2025-03-09 16:54:37] INFO: Executing command: tar -czf /media/sf_CA1/manufacturing/backup/backup-20250309-165437/backup.tar.gz -C /media/sf_CA1/manufacturing/report . 
+[2025-03-09 16:54:37] INFO: Command executed successfully
+[2025-03-09 16:54:37] INFO: Backup operation completed successfully
+[2025-03-09 16:54:37] INFO: Unlocking directories after backup/transfer
+[2025-03-09 16:54:37] INFO: Directories unlocked successfully
+[2025-03-09 16:58:38] INFO: Received SIGTERM, shutting down...
+[2025-03-09 16:58:38] INFO: Daemon shutting down
+[2025-03-09 17:01:32] INFO: IPC message queue created successfully
+[2025-03-09 17:01:32] INFO: Daemon started successfully
+[2025-03-09 17:01:44] INFO: Received SIGTERM, shutting down...
+[2025-03-09 17:01:44] INFO: Daemon shutting down
+[2025-03-09 17:14:09] INFO: IPC message queue created successfully
+[2025-03-09 17:14:09] INFO: Daemon started successfully
+[2025-03-09 17:14:44] INFO: Received SIGTERM, shutting down...
+[2025-03-09 17:14:44] INFO: Daemon shutting down
+[2025-03-09 17:15:11] INFO: IPC message queue created successfully
+[2025-03-09 17:15:11] INFO: Daemon started successfully
+[2025-03-09 17:16:31] INFO: Received SIGTERM, shutting down...
+[2025-03-09 17:16:31] INFO: Daemon shutting down
+[2025-03-09 17:17:23] INFO: IPC message queue created successfully
+[2025-03-09 17:17:23] INFO: Daemon started successfully
+[2025-03-09 17:25:56] INFO: Received SIGTERM, shutting down...
+[2025-03-09 17:25:56] INFO: Daemon shutting down
+[2025-03-09 17:26:49] INFO: IPC message queue created successfully
+[2025-03-09 17:26:49] INFO: Daemon started successfully
+[2025-03-09 17:30:05] INFO: Received SIGTERM, shutting down...
+[2025-03-09 17:30:05] INFO: Daemon shutting down
+[2025-03-09 17:30:53] INFO: IPC message queue created successfully
+[2025-03-09 17:30:53] INFO: Daemon started successfully
+[2025-03-09 17:32:02] INFO: Received IPC message: BACKUP_TRANSFER
+[2025-03-09 17:32:02] INFO: Manual backup/transfer requested via IPC
+[2025-03-09 17:32:02] INFO: Locking directories for backup/transfer
+[2025-03-09 17:32:02] INFO: Directories locked successfully
+[2025-03-09 17:32:02] INFO: Starting file transfer operation
+[2025-03-09 17:32:02] INFO: Executing command: cp /media/sf_CA1/manufacturing/upload/Sales_2025-03-09.xml /media/sf_CA1/manufacturing/report/Sales_2025-03-09.xml 
+[2025-03-09 17:32:02] INFO: Command executed successfully
+[2025-03-09 17:32:02] INFO: Executing command: rm /media/sf_CA1/manufacturing/upload/Sales_2025-03-09.xml 
+[2025-03-09 17:32:02] INFO: Command executed successfully
+[2025-03-09 17:32:02] INFO: File transfer operation completed (1 files processed)
+[2025-03-09 17:32:02] INFO: Starting backup operation
+[2025-03-09 17:32:02] INFO: Executing command: mkdir -p /media/sf_CA1/manufacturing/backup/backup-20250309-173202 
+[2025-03-09 17:32:02] INFO: Command executed successfully
+[2025-03-09 17:32:02] INFO: Executing command: tar -czf /media/sf_CA1/manufacturing/backup/backup-20250309-173202/backup.tar.gz -C /media/sf_CA1/manufacturing/report . 
+[2025-03-09 17:32:02] INFO: Command executed successfully
+[2025-03-09 17:32:02] INFO: Backup operation completed successfully
+[2025-03-09 17:32:02] INFO: Unlocking directories after backup/transfer
+[2025-03-09 17:32:02] INFO: Directories unlocked successfully
+[2025-03-09 17:34:27] INFO: Received IPC message: BACKUP_TRANSFER
+[2025-03-09 17:34:27] INFO: Manual backup/transfer requested via IPC
+[2025-03-09 17:34:27] INFO: Locking directories for backup/transfer
+[2025-03-09 17:34:27] INFO: Directories locked successfully
+[2025-03-09 17:34:27] INFO: Starting file transfer operation
+[2025-03-09 17:34:27] INFO: Executing command: cp /media/sf_CA1/manufacturing/upload/Warehouse_2025-03-09.xml /media/sf_CA1/manufacturing/report/Warehouse_2025-03-09.xml 
+[2025-03-09 17:34:27] INFO: Command executed successfully
+[2025-03-09 17:34:27] INFO: Executing command: rm /media/sf_CA1/manufacturing/upload/Warehouse_2025-03-09.xml 
+[2025-03-09 17:34:27] INFO: Command executed successfully
+[2025-03-09 17:34:27] INFO: File transfer operation completed (1 files processed)
+[2025-03-09 17:34:27] INFO: Starting backup operation
+[2025-03-09 17:34:27] INFO: Executing command: mkdir -p /media/sf_CA1/manufacturing/backup/backup-20250309-173427 
+[2025-03-09 17:34:27] INFO: Command executed successfully
+[2025-03-09 17:34:27] INFO: Executing command: tar -czf /media/sf_CA1/manufacturing/backup/backup-20250309-173427/backup.tar.gz -C /media/sf_CA1/manufacturing/report . 
+[2025-03-09 17:34:27] INFO: Command executed successfully
+[2025-03-09 17:34:27] INFO: Backup operation completed successfully
+[2025-03-09 17:34:27] INFO: Unlocking directories after backup/transfer
+[2025-03-09 17:34:27] INFO: Directories unlocked successfully
+[2025-03-09 17:35:03] INFO: Received SIGUSR1, triggering backup/transfer...
+[2025-03-09 17:35:03] INFO: Locking directories for backup/transfer
+[2025-03-09 17:35:03] INFO: Directories locked successfully
+[2025-03-09 17:35:03] INFO: Starting file transfer operation
+[2025-03-09 17:35:03] INFO: Executing command: cp /media/sf_CA1/manufacturing/upload/Warehouse_2025-03-09.xml /media/sf_CA1/manufacturing/report/Warehouse_2025-03-09.xml 
+[2025-03-09 17:35:03] INFO: Command executed successfully
+[2025-03-09 17:35:03] INFO: Executing command: rm /media/sf_CA1/manufacturing/upload/Warehouse_2025-03-09.xml 
+[2025-03-09 17:35:03] INFO: Command executed successfully
+[2025-03-09 17:35:03] INFO: File transfer operation completed (1 files processed)
+[2025-03-09 17:35:03] INFO: Starting backup operation
+[2025-03-09 17:35:03] INFO: Executing command: mkdir -p /media/sf_CA1/manufacturing/backup/backup-20250309-173503 
+[2025-03-09 17:35:03] INFO: Command executed successfully
+[2025-03-09 17:35:03] INFO: Executing command: tar -czf /media/sf_CA1/manufacturing/backup/backup-20250309-173503/backup.tar.gz -C /media/sf_CA1/manufacturing/report . 
+[2025-03-09 17:35:03] INFO: Command executed successfully
+[2025-03-09 17:35:03] INFO: Backup operation completed successfully
+[2025-03-09 17:35:03] INFO: Unlocking directories after backup/transfer
+[2025-03-09 17:35:03] INFO: Directories unlocked successfully
+[2025-03-09 17:35:03] INFO: Received IPC message: BACKUP_TRANSFER
+[2025-03-09 17:35:03] INFO: Manual backup/transfer requested via IPC
+[2025-03-09 17:35:03] INFO: Locking directories for backup/transfer
+[2025-03-09 17:35:03] INFO: Directories locked successfully
+[2025-03-09 17:35:03] INFO: Starting file transfer operation
+[2025-03-09 17:35:03] INFO: File transfer operation completed (0 files processed)
+[2025-03-09 17:35:03] INFO: Starting backup operation
+[2025-03-09 17:35:03] INFO: Executing command: mkdir -p /media/sf_CA1/manufacturing/backup/backup-20250309-173503 
+[2025-03-09 17:35:03] INFO: Command executed successfully
+[2025-03-09 17:35:03] INFO: Executing command: tar -czf /media/sf_CA1/manufacturing/backup/backup-20250309-173503/backup.tar.gz -C /media/sf_CA1/manufacturing/report . 
+[2025-03-09 17:35:03] INFO: Command executed successfully
+[2025-03-09 17:35:03] INFO: Backup operation completed successfully
+[2025-03-09 17:35:03] INFO: Unlocking directories after backup/transfer
+[2025-03-09 17:35:03] INFO: Directories unlocked successfully
+[2025-03-09 17:35:26] INFO: Received SIGUSR1, triggering backup/transfer...
+[2025-03-09 17:35:26] INFO: Locking directories for backup/transfer
+[2025-03-09 17:35:26] INFO: Directories locked successfully
+[2025-03-09 17:35:26] INFO: Starting file transfer operation
+[2025-03-09 17:35:26] INFO: File transfer operation completed (0 files processed)
+[2025-03-09 17:35:26] INFO: Starting backup operation
+[2025-03-09 17:35:26] INFO: Executing command: mkdir -p /media/sf_CA1/manufacturing/backup/backup-20250309-173526 
+[2025-03-09 17:35:26] INFO: Command executed successfully
+[2025-03-09 17:35:26] INFO: Executing command: tar -czf /media/sf_CA1/manufacturing/backup/backup-20250309-173526/backup.tar.gz -C /media/sf_CA1/manufacturing/report . 
+[2025-03-09 17:35:26] INFO: Command executed successfully
+[2025-03-09 17:35:26] INFO: Backup operation completed successfully
+[2025-03-09 17:35:26] INFO: Unlocking directories after backup/transfer
+[2025-03-09 17:35:26] INFO: Directories unlocked successfully
+[2025-03-09 17:36:13] INFO: Received SIGUSR1, triggering backup/transfer...
+[2025-03-09 17:36:13] INFO: Locking directories for backup/transfer
+[2025-03-09 17:36:13] INFO: Directories locked successfully
+[2025-03-09 17:36:13] INFO: Starting file transfer operation
+[2025-03-09 17:36:13] INFO: Executing command: cp /media/sf_CA1/manufacturing/upload/Sales_2025-03-09.xml /media/sf_CA1/manufacturing/report/Sales_2025-03-09.xml 
+[2025-03-09 17:36:13] INFO: Command executed successfully
+[2025-03-09 17:36:13] INFO: Executing command: rm /media/sf_CA1/manufacturing/upload/Sales_2025-03-09.xml 
+[2025-03-09 17:36:13] INFO: Command executed successfully
+[2025-03-09 17:36:13] INFO: File transfer operation completed (1 files processed)
+[2025-03-09 17:36:13] INFO: Starting backup operation
+[2025-03-09 17:36:13] INFO: Executing command: mkdir -p /media/sf_CA1/manufacturing/backup/backup-20250309-173613 
+[2025-03-09 17:36:13] INFO: Command executed successfully
+[2025-03-09 17:36:13] INFO: Executing command: tar -czf /media/sf_CA1/manufacturing/backup/backup-20250309-173613/backup.tar.gz -C /media/sf_CA1/manufacturing/report . 
+[2025-03-09 17:36:13] INFO: Command executed successfully
+[2025-03-09 17:36:13] INFO: Backup operation completed successfully
+[2025-03-09 17:36:13] INFO: Unlocking directories after backup/transfer
+[2025-03-09 17:36:13] INFO: Directories unlocked successfully
+[2025-03-09 17:37:18] INFO: Received IPC message: BACKUP_TRANSFER
+[2025-03-09 17:37:18] INFO: Manual backup/transfer requested via IPC
+[2025-03-09 17:37:18] INFO: Locking directories for backup/transfer
+[2025-03-09 17:37:18] INFO: Directories locked successfully
+[2025-03-09 17:37:18] INFO: Starting file transfer operation
+[2025-03-09 17:37:18] INFO: File transfer operation completed (0 files processed)
+[2025-03-09 17:37:18] INFO: Starting backup operation
+[2025-03-09 17:37:18] INFO: Executing command: mkdir -p /media/sf_CA1/manufacturing/backup/backup-20250309-173718 
+[2025-03-09 17:37:18] INFO: Command executed successfully
+[2025-03-09 17:37:18] INFO: Executing command: tar -czf /media/sf_CA1/manufacturing/backup/backup-20250309-173718/backup.tar.gz -C /media/sf_CA1/manufacturing/report . 
+[2025-03-09 17:37:18] INFO: Command executed successfully
+[2025-03-09 17:37:18] INFO: Backup operation completed successfully
+[2025-03-09 17:37:18] INFO: Unlocking directories after backup/transfer
+[2025-03-09 17:37:18] INFO: Directories unlocked successfully
+[2025-03-09 17:38:15] INFO: Received SIGTERM, shutting down...
+[2025-03-09 17:38:15] INFO: Daemon shutting down
+[2025-03-09 17:39:27] INFO: IPC message queue created successfully
+[2025-03-09 17:39:27] INFO: Daemon started successfully
+[2025-03-09 17:41:38] INFO: Received IPC message: BACKUP_TRANSFER
+[2025-03-09 17:41:38] INFO: Manual backup/transfer requested via IPC
+[2025-03-09 17:41:38] INFO: Locking directories for backup/transfer
+[2025-03-09 17:41:38] INFO: Directories locked successfully
+[2025-03-09 17:41:38] INFO: Starting file transfer operation
+[2025-03-09 17:41:38] INFO: Executing command: cp /media/sf_CA1/manufacturing/upload/Sales_2025-03-09.xml /media/sf_CA1/manufacturing/report/Sales_2025-03-09.xml 
+[2025-03-09 17:41:38] INFO: Command executed successfully
+[2025-03-09 17:41:38] INFO: Executing command: rm /media/sf_CA1/manufacturing/upload/Sales_2025-03-09.xml 
+[2025-03-09 17:41:38] INFO: Command executed successfully
+[2025-03-09 17:41:38] INFO: Executing command: cp /media/sf_CA1/manufacturing/upload/Warehouse_2025-03-09.xml /media/sf_CA1/manufacturing/report/Warehouse_2025-03-09.xml 
+[2025-03-09 17:41:38] INFO: Command executed successfully
+[2025-03-09 17:41:38] INFO: Executing command: rm /media/sf_CA1/manufacturing/upload/Warehouse_2025-03-09.xml 
+[2025-03-09 17:41:38] INFO: Command executed successfully
+[2025-03-09 17:41:38] INFO: File transfer operation completed (2 files processed)
+[2025-03-09 17:41:38] INFO: Starting backup operation
+[2025-03-09 17:41:38] INFO: Executing command: mkdir -p /media/sf_CA1/manufacturing/backup/backup-20250309-174138 
+[2025-03-09 17:41:38] INFO: Command executed successfully
+[2025-03-09 17:41:38] INFO: Executing command: tar -czf /media/sf_CA1/manufacturing/backup/backup-20250309-174138/backup.tar.gz -C /media/sf_CA1/manufacturing/report . 
+[2025-03-09 17:41:38] INFO: Command executed successfully
+[2025-03-09 17:41:38] INFO: Backup operation completed successfully
+[2025-03-09 17:41:38] INFO: Unlocking directories after backup/transfer
+[2025-03-09 17:41:38] INFO: Directories unlocked successfully
+[2025-03-09 17:42:03] INFO: Received SIGTERM, shutting down...
+[2025-03-09 17:42:03] INFO: Daemon shutting down
+[2025-03-09 17:42:48] INFO: IPC message queue created successfully
+[2025-03-09 17:42:48] INFO: Daemon started successfully
+[2025-03-09 17:43:38] INFO: Received SIGUSR1, triggering backup/transfer...
+[2025-03-09 17:43:38] INFO: Locking directories for backup/transfer
+[2025-03-09 17:43:38] INFO: Directories locked successfully
+[2025-03-09 17:43:38] INFO: Starting file transfer operation
+[2025-03-09 17:43:38] INFO: Executing command: cp /media/sf_CA1/manufacturing/upload/Warehouse_2025-03-09.xml /media/sf_CA1/manufacturing/report/Warehouse_2025-03-09.xml 
+[2025-03-09 17:43:38] INFO: Command executed successfully
+[2025-03-09 17:43:38] INFO: Executing command: rm /media/sf_CA1/manufacturing/upload/Warehouse_2025-03-09.xml 
+[2025-03-09 17:43:38] INFO: Command executed successfully
+[2025-03-09 17:43:38] INFO: File transfer operation completed (1 files processed)
+[2025-03-09 17:43:38] INFO: Starting backup operation
+[2025-03-09 17:43:38] INFO: Executing command: mkdir -p /media/sf_CA1/manufacturing/backup/backup-20250309-174338 
+[2025-03-09 17:43:38] INFO: Command executed successfully
+[2025-03-09 17:43:38] INFO: Executing command: tar -czf /media/sf_CA1/manufacturing/backup/backup-20250309-174338/backup.tar.gz -C /media/sf_CA1/manufacturing/report . 
+[2025-03-09 17:43:38] INFO: Command executed successfully
+[2025-03-09 17:43:38] INFO: Backup operation completed successfully
+[2025-03-09 17:43:38] INFO: Unlocking directories after backup/transfer
+[2025-03-09 17:43:38] INFO: Directories unlocked successfully
